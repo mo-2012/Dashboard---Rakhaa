@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>الصفحة غير موجودة — رخاء</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%230F5A41'/%3E%3Ctext x='256' y='360' font-size='300' text-anchor='middle' fill='%23E6CB86' font-family='Tahoma,sans-serif' font-weight='800'%3E%D8%B1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap">
+<style>
+:root{--g:#0F5A41;--gold:#C9A24B;--ink:#14231D;--bg:#F6F4EE;--card:#fff;--muted:#5d6b64;--line:#e4e0d3}
+@media (prefers-color-scheme:dark){:root{--ink:#EAF1ED;--bg:#0E1713;--card:#15241D;--muted:#9db0a7;--line:#25382f;--gold:#D4AF37}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,Arial,sans-serif;line-height:1.8}
+.box{width:100%;max-width:440px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px 26px 30px;box-shadow:0 10px 30px rgba(15,90,65,.08)}
+.logo{width:68px;height:68px;border-radius:18px;background:var(--g);color:#E6CB86;display:inline-flex;align-items:center;justify-content:center;font-size:40px;font-weight:800;margin-bottom:10px}
+.code{font-size:84px;font-weight:800;line-height:1;letter-spacing:2px;color:var(--g);margin:6px 0 2px;direction:ltr}
+.code span{color:var(--gold)}
+@media (prefers-color-scheme:dark){.code{color:#5fc29a}}
+h1{font-size:21px;margin:8px 0 6px}
+p{margin:0 0 22px;color:var(--muted);font-size:15px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+a.btn,button{font:700 15px Cairo,Tahoma,Arial,sans-serif;text-decoration:none;border-radius:12px;padding:11px 22px;cursor:pointer;border:1px solid var(--g);min-height:44px;display:inline-flex;align-items:center}
+a.btn{background:var(--g);color:#fff}
+button{background:transparent;color:var(--g)}
+@media (prefers-color-scheme:dark){button{color:#5fc29a;border-color:#5fc29a}}
+a.btn:hover{filter:brightness(1.1)}
+small{display:block;margin-top:20px;color:var(--muted);font-size:12px;direction:ltr;word-break:break-all}
+</style>
+</head>
+<body>
+<main class="box">
+  <div class="logo" aria-hidden="true">ر</div>
+  <div class="code">4<span>0</span>4</div>
+  <h1>الصفحة دي مش موجودة</h1>
+  <p>ممكن يكون الرابط اتكتب غلط أو الصفحة اتنقلت. ارجع للرئيسية وكمّل شغلك.</p>
+  <div class="row">
+    <a class="btn" id="home" href="/">الرئيسية</a>
+    <button type="button" onclick="history.length>1?history.back():location.href=document.getElementById('home').href">رجوع</button>
+  </div>
+  <small id="path"></small>
+</main>
+<script>
+/* GitHub Pages (project site) بيحط اسم الريبو أول مسار؛ غير كده الجذر "/" */
+(function(){var p=location.pathname.split('/'),gh=/\.github\.io$/.test(location.hostname)&&p[1];
+ document.getElementById('home').href=gh?'/'+p[1]+'/':'/';
+ document.getElementById('path').textContent=location.pathname})();
+</script>
+</body>
+</html>
